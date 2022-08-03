@@ -44,7 +44,7 @@ docker run --name atm-console2 --env SERVER_URL=http://atm-server:9090 --env MAC
 ```
 docker run --name atm-server -p 127.0.0.1:9090:9090/tcp --volume atmvol:/db -it sharippriya/atm-server
 ```
-3. Connect the two instances to the same network so that they can talk to each other.
+3. Connect the two instances to the same network so that they can talk to each other. This must be done whenever a docker container is run.
 ```
 docker network create atm-network
 docker network connect atm-network atm-console
@@ -66,6 +66,7 @@ exit
 ```
 
 5. You can also execute the ATM Server APIs using Swagger UI at http://localhost:9090/swagger-ui.html
+6. To reset the database, delete the docker volume 'atmvol'
 
 ## Test Scenarios
 ### Login
