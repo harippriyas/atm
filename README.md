@@ -54,8 +54,14 @@ Available commands:
 ![Shell Commands](./img/console_help.gif)
 <br>
 Sample execution:
-![Shell Commands](./img/commands.jpg)
-
+```
+authorize 2859459814 7386
+balance
+deposit 50
+withdraw 50
+txnhistory
+exit
+```
 7. You can also execute the ATM Server APIs using Swagger UI
 ![Swagger UI](./img/swagger.jpg)
 
