@@ -63,8 +63,7 @@ txnhistory
 exit
 ```
 
-7. You can also execute the ATM Server APIs using Swagger UI
-![Swagger UI](./img/swagger.jpg)
+7. You can also execute the ATM Server APIs using Swagger UI at http://localhost:9090/swagger-ui.html
 
 ## Test Scenarios
 ### Login
