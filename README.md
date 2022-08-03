@@ -32,24 +32,22 @@ This solution is made up of two microservices: ATM Console application & ATM Ser
 
 ## Running the application
 The ATM console application and the ATM server applications are available as docker images. 
-1. Download the docker images from this repo.
-2. Load the images onto your system.
-3. Run the ATM console application
+1. Run the ATM console application
 ```
-docker run --name atm-console --env SERVER_URL=http://atm-server:9090 --env MACHINE_ID=0000000001 -it atm-console
+docker run --name atm-console --env SERVER_URL=http://atm-server:9090 --env MACHINE_ID=0000000001 -it sharippriya/atm-console
 ```
 You can run another instance of the console application (to mimic another ATM machine) by specifying the MACHINE_ID as 0000000002 for that instance.
-4. Run the ATM server application
+2. Run the ATM server application
 ```
-docker run --name atm-server -p 127.0.0.1:9090:9090/tcp --volume atmvol:/db -it atm-server
+docker run --name atm-server -p 127.0.0.1:9090:9090/tcp --volume atmvol:/db -it sharippriya/atm-server
 ```
-5. Connect the two instances to the same network so that they can talk to each other.
+3. Connect the two instances to the same network so that they can talk to each other.
 ```
 docker network create atm-network
 docker network connect atm-network atm-console
 docker network connect atm-network atm-server
 ```
-6. Execute commands in the console application
+4. Execute commands in the console application
 Available commands:
 ![Shell Commands](./img/console_help.gif)
 
@@ -63,7 +61,7 @@ txnhistory
 exit
 ```
 
-7. You can also execute the ATM Server APIs using Swagger UI at http://localhost:9090/swagger-ui.html
+5. You can also execute the ATM Server APIs using Swagger UI at http://localhost:9090/swagger-ui.html
 
 ## Test Scenarios
 ### Login
