@@ -36,7 +36,10 @@ The ATM console application and the ATM server applications are available as doc
 ```
 docker run --name atm-console --env SERVER_URL=http://atm-server:9090 --env MACHINE_ID=0000000001 -it sharippriya/atm-console
 ```
-You can run another instance of the console application (to mimic another ATM machine) by specifying the MACHINE_ID as 0000000002 for that instance.
+Optional: run another instance of the console application (to mimic another ATM machine)
+```
+docker run --name atm-console2 --env SERVER_URL=http://atm-server:9090 --env MACHINE_ID=0000000002 -it sharippriya/atm-console
+```
 2. Run the ATM server application
 ```
 docker run --name atm-server -p 127.0.0.1:9090:9090/tcp --volume atmvol:/db -it sharippriya/atm-server
