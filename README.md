@@ -52,7 +52,7 @@ docker network connect atm-network atm-server
 6. Execute commands in the console application
 Available commands:
 ![Shell Commands](./img/console_help.gif)
-<br>
+
 Sample execution:
 ```
 authorize 2859459814 7386
@@ -62,6 +62,7 @@ withdraw 50
 txnhistory
 exit
 ```
+
 7. You can also execute the ATM Server APIs using Swagger UI
 ![Swagger UI](./img/swagger.jpg)
 
