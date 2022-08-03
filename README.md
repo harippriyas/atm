@@ -50,6 +50,14 @@ docker network connect atm-network atm-console
 docker network connect atm-network atm-server
 ```
 6. Execute commands in the console application
+Available commands:
+![Shell Commands](./img/console_help.gif)
+<br>
+Sample execution:
+![Shell Commands](./img/commands.jpg)
+
+7. You can also execute the ATM Server APIs using Swagger UI
+![Swagger UI](./img/swagger.jpg)
 
 ## Test Scenarios
 ### Login
