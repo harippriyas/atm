@@ -11,7 +11,7 @@ This is an ATM application that allows to perform transactions like deposit, wit
 ## Design
 This solution is made up of two microservices: ATM Console application & ATM Server application and is supported by the H2 Database.
 
-<image>
+![Design](./img/design.jpg)
 * The ATM Console application supports shell commands while the Server application supports APIs.
 * The applications are Spring Framework based Java microservices.
 * They are available as docker images, so that they can be run even without setting up a Java development environment.
